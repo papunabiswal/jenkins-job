@@ -15,7 +15,7 @@ pipeline {
   stage('Docker Build and Tag') {
            steps {
               
-                sh 'docker build -t rahul:latest .' 
+                sh 'docker build -t bisu:latest .' 
                 sh 'docker tag rahul papunabiswal/testing:$BUILD_NUMBER'
                
           }
