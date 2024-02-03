@@ -16,7 +16,7 @@ pipeline {
            steps {
               
                 sh 'docker build -t bisu:latest .' 
-                sh 'docker tag rahul papunabiswal/testing:$BUILD_NUMBER'
+                sh 'docker tag bisu papunabiswal/testing:$BUILD_NUMBER'
                
           }
         }
