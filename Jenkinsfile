@@ -16,14 +16,14 @@ pipeline {
            steps {
               
                 sh 'docker build -t bisu:latest .' 
-                sh 'docker tag bisu papunabiswal/testing:$BUILD_NUMBER'
+                sh 'docker tag bisu papunabiswal/bisu:$BUILD_NUMBER'
                
           }
         }
   stage('Publish image to Docker Hub') {
             steps {
         withDockerRegistry([ credentialsId: "DockerHub", url: "" ]) {
-           sh  'docker push papunabiswal/testing:$BUILD_NUMBER' 
+           sh  'docker push papunabiswal/bisu:$BUILD_NUMBER' 
 		}
                   
           }
